@@ -1,13 +1,18 @@
 {
   "manifest_version": 3,
-  "name": "teste",
+  "name": "Campo Extra no Kanbanize Para Criar Branch",
   "version": "1.0",
-  "description": "testinho.",
-  "permissions": ["storage"],
+  "description": "Adiciona um botão extra no Kanbanize para copiar o nome dao Card para criação da branch.",
   "content_scripts": [
     {
-      "matches": ["https://elotech.kanbanize.com/ctrl_board/*/cards/*/details/"],
-      "js": ["content.js"]
+      "matches": ["https://*.kanbanize.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
     }
-  ]
+  ] ,
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
 }
